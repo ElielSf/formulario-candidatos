@@ -5,13 +5,68 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-
-    
 }
 
-.wrapperFormulario__incricao, .wrapperFormulario__endereco {
+.wrapperFormulario__inscricao, .wrapperFormulario__endereco {
     width: 40%;
     height: 60vh;
+
+    box-shadow: 1px 1px 4px rgb(100, 111, 126);
+    border-radius: 15px;
+    background-color: white;
+}
+
+.wrapperFormulario__inscricao, .wrapperFormulario__endereco, .wrapperFormulario_response {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrapperFormulario__input {
+    width: 50%;
+    height: 10%;
+
+
+    text-align: center;
+    font-size: 1.1em;
+    border: none;
+    box-shadow: 1px 1px 4px rgb(207, 207, 207);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(158, 158, 158);;
+ }
+
+.wrapperFormulario__button {
+    width: 20%;
+    height: 10%;
+    font-size: 1em;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgb(184, 184, 184);
+}
+
+.wrapperFormulario__titulo {
+    background-color: white;
+    font-size: 1.3em;
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+.wrapperFormulario_response {
+    width: 100%;
+    height: 100%;
 
     border-radius: 15px;
     background-color: white;
