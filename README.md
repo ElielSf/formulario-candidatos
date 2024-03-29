@@ -1,1 +1,1 @@
-# Formulário  de candidatos em um projeto
+# Formulário de candidatos em um projeto

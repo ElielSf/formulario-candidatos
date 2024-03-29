@@ -9,7 +9,7 @@ export default function Formulario() {
 
     const enviarFormulario = async () => {
         const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        const data = response.json();
+        const data = await response.json();
         setEndereco(data);
     }
     
@@ -24,13 +24,18 @@ export default function Formulario() {
                 <input className='wrapperFormulario__input' type="number" value={cep} onChange={(e) => setCep(e.target.value)} placeholder='Ex: 12345678' required/>
                 <button className='wrapperFormulario__button' onClick={enviarFormulario}>Enviar formulário</button>
             </div>
-            <div className='wrapperFormulario__endereco'>
-                {endereco && (
-                    <div className='wrapperFormulario_response'>
-                        <h3 className='wrapperFormulario__input'>Logradouro: {endereco.logradouro}</h3>
-                    </div>
-                )}
-            </div>
+            {endereco && (
+                <div className='wrapperFormulario__endereco'>
+                    <h3 className='wrapperFormulario__titulo'>Logradouro</h3>
+                    <p className='wrapperFormulario__dados'>{endereco.logradouro}</p>
+                    <h3 className='wrapperFormulario__titulo'>Bairro</h3>
+                    <p className='wrapperFormulario__dados'>{endereco.bairro}</p>
+                    <h3 className='wrapperFormulario__titulo'>Localidade</h3>
+                    <p className='wrapperFormulario__dados'>{endereco.localidade}</p>  
+                    <h3 className='wrapperFormulario__titulo'>Estado</h3>
+                    <p className='wrapperFormulario__dados'>{endereco.uf}</p>
+                </div>
+            )}
         </div>
     )
 }
